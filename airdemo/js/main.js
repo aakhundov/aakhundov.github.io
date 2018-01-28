@@ -548,7 +548,7 @@ varLoader.getAllVariables().then(function(vars) {
 
 
     // behind-the-curtain one time heavy inference
-    // of a randomly generated input for cold start
+    // of randomly generated input for cold start
 
     downsampled_input = [];
     for (let i = 0; i < 2500; i++) {
@@ -558,13 +558,18 @@ varLoader.getAllVariables().then(function(vars) {
     infer();
     clear_all_views();
 
-
-    // raise the curtain
+    // start the inference loop
 
     (function inference_loop() {
-        infer();
-        setTimeout(inference_loop, 100);
+        new Promise((resolve) => {
+            infer();
+            resolve();
+        }).then(() => {
+            setTimeout(inference_loop, 100)
+        });
     })();
+
+    // raise the curtain
 
     $('#loading').remove();
     $('#demo').css('visibility', 'visible');
