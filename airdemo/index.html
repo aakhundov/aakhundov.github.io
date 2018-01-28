@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div style="width:900px;" id="loading">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        <div class="div-table" id="demo" style="padding: 10px; visibility: hidden;">
+            <div class="div-table-row">
+                <div class="div-table-col" style="margin-right: 20px; margin-bottom: 20px;">
+                    <canvas id="draw" width=350 height=350 oncontextmenu="return false;">
+                        Your browser doesn't support canvas.
+                    </canvas>
+                    <canvas id="draw_rect" width=350 height=350 oncontextmenu="return false;">
+                        Your browser doesn't support canvas.
+                    </canvas>
+                    <canvas id="down" width=350 height=350 oncontextmenu="return false;">
+                        Your browser doesn't support canvas.
+                    </canvas>
+                </div>
+                <div class="div-table-col" style="margin-right: 20px; margin-bottom: 20px;">
+                    <canvas id="recon_rect" width=350 height=350 oncontextmenu="return false;">
+                        Your browser doesn't support canvas.
+                    </canvas>
+                    <canvas id="recon" width=350 height=350 oncontextmenu="return false;">
+                        Your browser doesn't support canvas.
+                    </canvas>
+                </div>
+                <div class="div-table-col">
+                    <canvas id="rec_window_1" width=161 height=161 oncontextmenu="return false;">
+                        Your browser doesn't support canvas.
+                    </canvas>
+                    <canvas id="rec_window_2" width=161 height=161 oncontextmenu="return false;">
+                        Your browser doesn't support canvas.
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/deeplearn.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
