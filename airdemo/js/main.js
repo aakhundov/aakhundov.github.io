@@ -345,68 +345,33 @@ varLoader.getAllVariables().then(function(vars) {
 
     // pre-sigmoid scale (s) distribution (1D Normal)
 
-    const scale_mean = chain_dense_layers(
-        create_dense_layer(
-            vars['air/rnn/scale/mean/hidden/weights'],
-            vars['air/rnn/scale/mean/hidden/biases'],
-            (x) => math.relu(x)
-        ),
-        create_dense_layer(
-            vars['air/rnn/scale/mean/output/weights'],
-            vars['air/rnn/scale/mean/output/biases']
-        )
+    const scale_mean = create_dense_layer(
+        vars['air/rnn/scale/mean/output/weights'],
+        vars['air/rnn/scale/mean/output/biases']
     );
 
-    const scale_log_variance = chain_dense_layers(
-        create_dense_layer(
-            vars['air/rnn/scale/log_variance/hidden/weights'],
-            vars['air/rnn/scale/log_variance/hidden/biases'],
-            (x) => math.relu(x)
-        ),
-        create_dense_layer(
-            vars['air/rnn/scale/log_variance/output/weights'],
-            vars['air/rnn/scale/log_variance/output/biases']
-        )
+    const scale_log_variance = create_dense_layer(
+        vars['air/rnn/scale/log_variance/output/weights'],
+        vars['air/rnn/scale/log_variance/output/biases']
     );
 
     // pre-tanh shift (x, y) distribution (2D Normal)
 
-    const shift_mean = chain_dense_layers(
-        create_dense_layer(
-            vars['air/rnn/shift/mean/hidden/weights'],
-            vars['air/rnn/shift/mean/hidden/biases'],
-            (x) => math.relu(x)
-        ),
-        create_dense_layer(
-            vars['air/rnn/shift/mean/output/weights'],
-            vars['air/rnn/shift/mean/output/biases']
-        )
+    const shift_mean = create_dense_layer(
+        vars['air/rnn/shift/mean/output/weights'],
+        vars['air/rnn/shift/mean/output/biases']
     );
 
-    const shift_log_variance = chain_dense_layers(
-        create_dense_layer(
-            vars['air/rnn/shift/log_variance/hidden/weights'],
-            vars['air/rnn/shift/log_variance/hidden/biases'],
-            (x) => math.relu(x)
-        ),
-        create_dense_layer(
+    const shift_log_variance = create_dense_layer(
             vars['air/rnn/shift/log_variance/output/weights'],
             vars['air/rnn/shift/log_variance/output/biases']
-        )
     );
 
     // z_pres log-odds distribution (Bernoulli)
 
-    const z_pres_log_odds = chain_dense_layers(
-        create_dense_layer(
-            vars['air/rnn/z_pres/log_odds/hidden/weights'],
-            vars['air/rnn/z_pres/log_odds/hidden/biases'],
-            (x) => math.relu(x)
-        ),
-        create_dense_layer(
+    const z_pres_log_odds = create_dense_layer(
             vars['air/rnn/z_pres/log_odds/output/weights'],
             vars['air/rnn/z_pres/log_odds/output/biases']
-        )
     );
 
     // variational auto-encoder
@@ -464,8 +429,8 @@ varLoader.getAllVariables().then(function(vars) {
 
 
     const max_steps = 3;
-    const init_c = NDArray.zeros([1, 256]);
-    const init_h = NDArray.zeros([1, 256]);
+    const init_c = NDArray.zeros([1, 64]);
+    const init_h = NDArray.zeros([1, 64]);
     let prev_input_sum = null, prev_states = [];
 
     function infer() {

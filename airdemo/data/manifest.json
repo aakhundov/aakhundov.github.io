@@ -2,27 +2,14 @@
   "air/rnn/rnn/bias": {
     "filename": "air_rnn_rnn_bias",
     "shape": [
-      1024
+      256
     ]
   },
   "air/rnn/rnn/kernel": {
     "filename": "air_rnn_rnn_kernel",
     "shape": [
-      2756,
-      1024
-    ]
-  },
-  "air/rnn/scale/log_variance/hidden/biases": {
-    "filename": "air_rnn_scale_log_variance_hidden_biases",
-    "shape": [
-      64
-    ]
-  },
-  "air/rnn/scale/log_variance/hidden/weights": {
-    "filename": "air_rnn_scale_log_variance_hidden_weights",
-    "shape": [
-      256,
-      64
+      2564,
+      256
     ]
   },
   "air/rnn/scale/log_variance/output/biases": {
@@ -38,19 +25,6 @@
       1
     ]
   },
-  "air/rnn/scale/mean/hidden/biases": {
-    "filename": "air_rnn_scale_mean_hidden_biases",
-    "shape": [
-      64
-    ]
-  },
-  "air/rnn/scale/mean/hidden/weights": {
-    "filename": "air_rnn_scale_mean_hidden_weights",
-    "shape": [
-      256,
-      64
-    ]
-  },
   "air/rnn/scale/mean/output/biases": {
     "filename": "air_rnn_scale_mean_output_biases",
     "shape": [
@@ -64,19 +38,6 @@
       1
     ]
   },
-  "air/rnn/shift/log_variance/hidden/biases": {
-    "filename": "air_rnn_shift_log_variance_hidden_biases",
-    "shape": [
-      64
-    ]
-  },
-  "air/rnn/shift/log_variance/hidden/weights": {
-    "filename": "air_rnn_shift_log_variance_hidden_weights",
-    "shape": [
-      256,
-      64
-    ]
-  },
   "air/rnn/shift/log_variance/output/biases": {
     "filename": "air_rnn_shift_log_variance_output_biases",
     "shape": [
@@ -88,19 +49,6 @@
     "shape": [
       64,
       2
-    ]
-  },
-  "air/rnn/shift/mean/hidden/biases": {
-    "filename": "air_rnn_shift_mean_hidden_biases",
-    "shape": [
-      64
-    ]
-  },
-  "air/rnn/shift/mean/hidden/weights": {
-    "filename": "air_rnn_shift_mean_hidden_weights",
-    "shape": [
-      256,
-      64
     ]
   },
   "air/rnn/shift/mean/output/biases": {
@@ -125,99 +73,86 @@
   "air/rnn/vae/gen_mean/weights": {
     "filename": "air_rnn_vae_gen_mean_weights",
     "shape": [
-      512,
+      256,
       784
     ]
   },
   "air/rnn/vae/generative_1/biases": {
     "filename": "air_rnn_vae_generative_1_biases",
     "shape": [
-      256
+      128
     ]
   },
   "air/rnn/vae/generative_1/weights": {
     "filename": "air_rnn_vae_generative_1_weights",
     "shape": [
-      50,
-      256
+      20,
+      128
     ]
   },
   "air/rnn/vae/generative_2/biases": {
     "filename": "air_rnn_vae_generative_2_biases",
     "shape": [
-      512
+      256
     ]
   },
   "air/rnn/vae/generative_2/weights": {
     "filename": "air_rnn_vae_generative_2_weights",
     "shape": [
-      256,
-      512
+      128,
+      256
     ]
   },
   "air/rnn/vae/rec_log_variance/biases": {
     "filename": "air_rnn_vae_rec_log_variance_biases",
     "shape": [
-      50
+      20
     ]
   },
   "air/rnn/vae/rec_log_variance/weights": {
     "filename": "air_rnn_vae_rec_log_variance_weights",
     "shape": [
-      256,
-      50
+      128,
+      20
     ]
   },
   "air/rnn/vae/rec_mean/biases": {
     "filename": "air_rnn_vae_rec_mean_biases",
     "shape": [
-      50
+      20
     ]
   },
   "air/rnn/vae/rec_mean/weights": {
     "filename": "air_rnn_vae_rec_mean_weights",
     "shape": [
-      256,
-      50
+      128,
+      20
     ]
   },
   "air/rnn/vae/recognition_1/biases": {
     "filename": "air_rnn_vae_recognition_1_biases",
     "shape": [
-      512
+      256
     ]
   },
   "air/rnn/vae/recognition_1/weights": {
     "filename": "air_rnn_vae_recognition_1_weights",
     "shape": [
       784,
-      512
+      256
     ]
   },
   "air/rnn/vae/recognition_2/biases": {
     "filename": "air_rnn_vae_recognition_2_biases",
     "shape": [
-      256
+      128
     ]
   },
   "air/rnn/vae/recognition_2/weights": {
     "filename": "air_rnn_vae_recognition_2_weights",
     "shape": [
-      512,
-      256
-    ]
-  },
-  "air/rnn/z_pres/log_odds/hidden/biases": {
-    "filename": "air_rnn_z_pres_log_odds_hidden_biases",
-    "shape": [
-      64
-    ]
-  },
-  "air/rnn/z_pres/log_odds/hidden/weights": {
-    "filename": "air_rnn_z_pres_log_odds_hidden_weights",
-    "shape": [
       256,
-      64
+      128
     ]
   },
   "air/rnn/z_pres/log_odds/output/biases": {
